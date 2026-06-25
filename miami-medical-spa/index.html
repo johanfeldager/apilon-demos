@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your AI Receptionist · Miami Medical Spa × Apilon AI</title>
+  <meta name="description" content="A live AI voice receptionist built specifically for Miami Medical Spa by Apilon AI. Try it now.">
+  <meta name="theme-color" content="#0f4b56">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Your AI Receptionist · Miami Medical Spa × Apilon AI">
+  <meta property="og:description" content="A live AI voice receptionist built specifically for Miami Medical Spa. Tap to talk to it.">
+  <meta property="og:type" content="website">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['Geist','ui-sans-serif','system-ui','sans-serif'], mono: ['Geist Mono','ui-monospace','monospace'] },
+      colors: { ap: { bg:'#090a0a', bg2:'#0d1a1e', card:'#101415', border:'#1c2c2f',
+        teal:'#0f4b56', teal2:'#146475', tealbright:'#39c7d6', orange:'#f27d16',
+        text:'#eff3f4', muted:'#809097', dim:'#4a6068' }},
+    }}}
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:#090a0a}
+    body{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#eff3f4}
+    h1,h2,h3{text-wrap:balance;letter-spacing:-0.035em}
+    p,li{text-wrap:pretty}
+    .eyebrow{letter-spacing:0.16em}
+    .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+    .aurora::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:1100px;height:760px;border-radius:50%;
+      background:radial-gradient(closest-side, rgba(15,75,86,0.55), rgba(15,75,86,0.18) 55%, transparent 75%);filter:blur(40px)}
+    .aurora::after{content:"";position:absolute;top:8%;right:-10%;width:560px;height:560px;border-radius:50%;
+      background:radial-gradient(closest-side, rgba(242,125,22,0.16), transparent 70%);filter:blur(50px)}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.035;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    main,header,footer{position:relative;z-index:2}
+    a,button{transition:all .22s cubic-bezier(.22,1,.36,1)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+    .reveal.in{opacity:1;transform:none}
+    .card{background:#101415;border:1px solid #1c2c2f;box-shadow:0 6px 24px -6px rgba(8,22,26,.7),0 0 0 1px rgba(28,44,47,.5)}
+    .hint-pulse{animation:hp 2.4s ease-in-out infinite}
+    @keyframes hp{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(4px)}}
+    .glow-ring{box-shadow:0 0 0 1px rgba(57,199,214,.25),0 0 40px rgba(15,75,86,.35)}
+  </style>
+</head>
+<body>
+  <div class="aurora"></div>
+
+  <header class="w-full">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+      <img src="../logo-white.png" alt="Apilon AI" class="h-8 w-auto">
+      <span class="inline-flex items-center gap-2 text-xs font-medium text-ap-muted">
+        <span class="h-2 w-2 rounded-full bg-ap-tealbright" style="box-shadow:0 0 10px #39c7d6"></span> LIVE DEMO
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="max-w-6xl mx-auto px-6 pt-10 pb-16 md:pt-20 md:pb-24">
+      <p class="eyebrow reveal text-xs md:text-sm font-semibold text-ap-tealbright uppercase mb-5">AI Voice Receptionist · Built for you</p>
+      <h1 class="reveal text-4xl md:text-6xl font-extrabold leading-[1.04] max-w-4xl">
+        We built a receptionist<br class="hidden md:block"> for <span class="text-ap-tealbright">Miami Medical Spa</span>.
+      </h1>
+      <p class="reveal text-lg md:text-xl text-ap-muted mt-6 max-w-2xl leading-relaxed">This is a working AI voice receptionist, trained on your spa, your treatments, and how you talk to patients. It answers every call, day or night, and books consultations while you focus on clients.</p>
+
+      <div class="reveal mt-10 card rounded-2xl p-6 md:p-8 max-w-2xl glow-ring">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 h-12 w-12 rounded-full grid place-items-center" style="background:radial-gradient(circle at 30% 30%, #39c7d6, #0f4b56)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold">Try it right now</h2>
+            <p class="text-ap-muted mt-1.5 leading-relaxed">
+              Tap the <span class="text-ap-orange font-semibold">orange button</span> in the bottom-right corner,
+              allow microphone access, and talk to Sofia like a real customer would.
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 flex items-center gap-2 text-sm text-ap-dim hint-pulse">
+          <span>Look bottom-right</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 17V7M17 17H7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="reveal card rounded-2xl p-6">
+          <div class="text-ap-tealbright mb-3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3 class="font-bold text-lg">Answers every call, 24/7</h3>
+          <p class="text-ap-muted mt-2 text-[15px] leading-relaxed">No more missed calls after hours or when the front desk is busy. Every customer gets picked up.</p>
+        </div>
+        <div class="reveal card rounded-2xl p-6">
+          <div class="text-ap-tealbright mb-3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <h3 class="font-bold text-lg">Books free consultations</h3>
+          <p class="text-ap-muted mt-2 text-[15px] leading-relaxed">Captures name, treatment interest, and preferred time, then hands a ready-to-confirm booking to your team.</p>
+        </div>
+        <div class="reveal card rounded-2xl p-6">
+          <div class="text-ap-tealbright mb-3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 class="font-bold text-lg">Knows your business</h3>
+          <p class="text-ap-muted mt-2 text-[15px] leading-relaxed">Trained on your real treatments, from CoolSculpting to Thermage, and never invents prices or makes promises.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      <div class="reveal card rounded-2xl p-8 md:p-12 text-center" style="background:linear-gradient(160deg,#0d1a1e,#101415)">
+        <img src="../logo-white.png" alt="Apilon AI" class="h-9 w-auto mx-auto mb-6 opacity-95">
+        <h2 class="text-2xl md:text-3xl font-bold max-w-2xl mx-auto">AI voice receptionists, done for you.</h2>
+        <p class="text-ap-muted mt-4 max-w-2xl mx-auto leading-relaxed">
+          Apilon AI designs, builds, and runs custom AI receptionists for service businesses. You never touch the tech,
+          you just stop losing revenue to missed calls. This demo was built specifically for Miami Medical Spa.
+        </p>
+        <a href="mailto:hello@apilon.ai?subject=I%20tried%20the%20Miami%20Medical%20Spa%20demo" class="inline-block mt-7 bg-ap-orange text-[#0a0a0a] font-semibold px-7 py-3.5 rounded-full hover:brightness-110">Get one for your business</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-ap-border">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <img src="../logo-white.png" alt="Apilon AI" class="h-7 w-auto opacity-80">
+      <p class="text-xs text-ap-dim text-center md:text-right">Demo built by Apilon AI · Not affiliated with Miami Medical Spa · This is a demonstration of AI capability.</p>
+    </div>
+  </footer>
+
+  <elevenlabs-convai agent-id="agent_6501kvn2gzp1fgztcfd7s414f3fc"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <script>
+    const obs = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*60)+'ms';obs.observe(el)});
+  </script>
+</body>
+</html>
