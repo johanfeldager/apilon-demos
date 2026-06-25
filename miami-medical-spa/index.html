@@ -43,36 +43,37 @@
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
     .reveal.in{opacity:1;transform:none}
     .card{background:#101415;border:1px solid #1c2c2f;box-shadow:0 6px 24px -6px rgba(8,22,26,.7),0 0 0 1px rgba(28,44,47,.5)}
-    .hint-pulse{animation:hp 2.4s ease-in-out infinite}
-    @keyframes hp{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(4px)}}
-    .glow-ring{box-shadow:0 0 0 1px rgba(57,199,214,.25),0 0 40px rgba(15,75,86,.35)}
-    /* Phone mockup */
-    .phone{position:relative;width:300px;max-width:82vw;height:602px;display:block;border-radius:46px;
-      background:linear-gradient(165deg,#1a2625,#0a1112);border:1px solid #233537;
-      box-shadow:0 40px 90px -25px rgba(0,0,0,.85),0 0 0 1px rgba(28,44,47,.5),0 0 70px rgba(15,75,86,.22);
-      padding:13px;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+    #apilon-start.is-live{background:#e5484d;color:#fff}
+    #apilon-start:disabled{opacity:.7;cursor:wait}
+    /* Phone mockup = live call UI (20% smaller) */
+    .phone{position:relative;width:240px;max-width:70vw;height:482px;display:block;border:0;cursor:pointer;border-radius:37px;
+      background:linear-gradient(165deg,#1a2625,#0a1112);outline:1px solid #233537;
+      box-shadow:0 36px 80px -22px rgba(0,0,0,.85),0 0 0 1px rgba(28,44,47,.5),0 0 60px rgba(15,75,86,.22);
+      padding:11px;transition:transform .45s cubic-bezier(.22,1,.36,1)}
     .phone:hover{transform:translateY(-6px)}
-    .phone::before{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:116px;height:24px;background:#05090a;border-radius:0 0 16px 16px;z-index:4}
-    .phone-screen{position:relative;height:100%;border-radius:34px;overflow:hidden;
+    .phone::before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:93px;height:19px;background:#05090a;border-radius:0 0 13px 13px;z-index:4}
+    .phone-screen{position:relative;height:100%;border-radius:27px;overflow:hidden;
       background:radial-gradient(125% 75% at 50% 0%,#103038,#070f0e 62%);
-      display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px;text-align:center}
-    .phone-top{position:absolute;top:32px;left:0;right:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5a7177}
-    .orb-wrap{position:relative;display:grid;place-items:center;width:140px;height:140px;margin-top:4px}
-    .orb{width:104px;height:104px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#7fe9f4,#39c7d6 38%,#0f4b56 78%);
-      box-shadow:0 0 44px rgba(57,199,214,.55);animation:orbpulse 2.6s ease-in-out infinite;z-index:2}
-    .ring{position:absolute;width:104px;height:104px;border-radius:50%;border:2px solid rgba(57,199,214,.5);animation:ring 2.6s ease-out infinite}
+      display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;text-align:center}
+    .phone-top{position:absolute;top:26px;left:0;right:0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#5a7177}
+    .orb-wrap{position:relative;display:grid;place-items:center;width:112px;height:112px;margin-top:3px}
+    .orb{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#7fe9f4,#39c7d6 38%,#0f4b56 78%);
+      box-shadow:0 0 36px rgba(57,199,214,.55);animation:orbpulse 2.6s ease-in-out infinite;z-index:2}
+    .ring{position:absolute;width:84px;height:84px;border-radius:50%;border:2px solid rgba(57,199,214,.5);animation:ring 2.6s ease-out infinite}
     .ring.ring2{animation-delay:1.3s}
     @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(2);opacity:0}}
     @keyframes orbpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-    .phone-name{color:#fff;font-weight:700;font-size:24px;margin-top:18px;letter-spacing:-.02em}
-    .phone-sub{color:#809097;font-size:13px;margin-top:6px;line-height:1.5}
-    .wave{display:flex;align-items:flex-end;gap:4px;height:28px;margin-top:18px}
-    .wave span{width:4px;height:8px;border-radius:2px;background:#39c7d6;animation:wv 1s ease-in-out infinite}
+    .phone-name{color:#fff;font-weight:700;font-size:20px;margin-top:14px;letter-spacing:-.02em}
+    .phone-sub{color:#809097;font-size:12px;margin-top:5px;line-height:1.5}
+    .wave{display:flex;align-items:flex-end;gap:3px;height:22px;margin-top:14px}
+    .wave span{width:3px;height:7px;border-radius:2px;background:#39c7d6;animation:wv 1s ease-in-out infinite}
     .wave span:nth-child(2){animation-delay:.12s}.wave span:nth-child(3){animation-delay:.24s}.wave span:nth-child(4){animation-delay:.36s}.wave span:nth-child(5){animation-delay:.24s}.wave span:nth-child(6){animation-delay:.12s}
-    @keyframes wv{0%,100%{height:8px;opacity:.5}50%{height:26px;opacity:1}}
-    .call-btn{width:60px;height:60px;border-radius:50%;background:#f27d16;display:grid;place-items:center;margin-top:26px;
-      box-shadow:0 10px 30px rgba(242,125,22,.45);animation:orbpulse 2s ease-in-out infinite}
-    .phone-hint{color:#5a7177;font-size:12px;margin-top:12px;text-transform:uppercase;letter-spacing:.12em}
+    @keyframes wv{0%,100%{height:7px;opacity:.5}50%{height:21px;opacity:1}}
+    .call-btn{width:48px;height:48px;border-radius:50%;background:#f27d16;display:grid;place-items:center;margin-top:21px;
+      box-shadow:0 10px 26px rgba(242,125,22,.45);animation:orbpulse 2s ease-in-out infinite}
+    .phone-screen[data-state="connecting"] .call-btn{background:#809097}
+    .phone-screen[data-state="live"] .call-btn{background:#e5484d;box-shadow:0 10px 26px rgba(229,72,77,.5)}
+    .phone-hint{color:#5a7177;font-size:11px;margin-top:10px;text-transform:uppercase;letter-spacing:.12em}
   </style>
 </head>
 <body>
@@ -98,19 +99,19 @@
           </h1>
           <p class="reveal text-lg md:text-xl text-ap-muted mt-6 max-w-xl leading-relaxed">This is a working AI voice receptionist, trained on your spa, your treatments, and how you talk to patients. It answers every call, day or night, and books consultations while you focus on clients.</p>
           <div class="reveal mt-8">
-            <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_6501kvn2gzp1fgztcfd7s414f3fc" target="_blank" rel="noopener"
+            <button id="apilon-start" type="button"
                class="inline-flex items-center justify-center gap-2.5 bg-ap-orange text-[#0a0a0a] font-bold px-8 py-4 rounded-full hover:brightness-110 text-lg">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               Start the call
-            </a>
-            <p class="mt-3 text-sm text-ap-dim max-w-md">Allow microphone access and talk to Sofia like a real customer would, or use the call bubble in the bottom-right corner.</p>
+            </button>
+            <p class="mt-3 text-sm text-ap-dim max-w-md">Allow microphone access and talk to Sofia like a real customer would. It runs right here, no app needed.</p>
           </div>
         </div>
-        <!-- RIGHT: phone mockup (also starts the call) -->
+        <!-- RIGHT: phone = live call UI -->
         <div class="reveal flex justify-center lg:justify-end">
-          <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_6501kvn2gzp1fgztcfd7s414f3fc" target="_blank" rel="noopener" class="phone" aria-label="Start the call with Sofia">
-            <div class="phone-screen">
-              <div class="phone-top">Incoming demo call</div>
+          <button type="button" class="phone" id="apilon-phone" aria-label="Start the call with Sofia">
+            <div class="phone-screen" id="phone-screen" data-state="idle">
+              <div class="phone-top" id="phone-top">Incoming demo call</div>
               <div class="orb-wrap">
                 <span class="ring"></span><span class="ring ring2"></span>
                 <div class="orb"></div>
@@ -118,10 +119,10 @@
               <div class="phone-name">Sofia</div>
               <div class="phone-sub">Miami Medical Spa<br>AI Receptionist</div>
               <div class="wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="call-btn"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-              <div class="phone-hint">Tap to talk</div>
+              <div class="call-btn"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="phone-hint" id="phone-hint">Tap to talk</div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -166,9 +167,60 @@
     </div>
   </footer>
 
-  <elevenlabs-convai agent-id="agent_6501kvn2gzp1fgztcfd7s414f3fc"></elevenlabs-convai>
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-  <script>
+  <!-- Inline voice call via ElevenLabs JS SDK (no redirect, no third-party branding) -->
+  <script type="module">
+    const AGENT_ID = "agent_6501kvn2gzp1fgztcfd7s414f3fc";
+    const phone = document.getElementById('apilon-phone');
+    const startBtn = document.getElementById('apilon-start');
+    const screenEl = document.getElementById('phone-screen');
+    const topEl = document.getElementById('phone-top');
+    const hintEl = document.getElementById('phone-hint');
+    let Conversation = null, convo = null, busy = false;
+
+    const set = (s) => { if (screenEl) screenEl.dataset.state = s; };
+    function reset(){
+      convo = null; busy = false; set('idle');
+      if (topEl) topEl.textContent = 'Incoming demo call';
+      if (hintEl) hintEl.textContent = 'Tap to talk';
+      if (startBtn){ startBtn.textContent = 'Start the call'; startBtn.disabled = false; startBtn.classList.remove('is-live'); }
+    }
+    async function toggle(){
+      if (busy) return;
+      if (convo){ busy = true; try { await convo.endSession(); } catch(e){} reset(); return; }
+      busy = true;
+      try {
+        set('connecting');
+        if (topEl) topEl.textContent = 'Connecting';
+        if (hintEl) hintEl.textContent = 'One moment';
+        if (startBtn){ startBtn.textContent = 'Connecting...'; startBtn.disabled = true; }
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        if (!Conversation){ ({ Conversation } = await import("https://esm.sh/@elevenlabs/client@1.13.0")); }
+        convo = await Conversation.startSession({
+          agentId: AGENT_ID,
+          onConnect: () => {
+            busy = false; set('live');
+            if (topEl) topEl.textContent = 'Live call';
+            if (hintEl) hintEl.textContent = 'Tap to end';
+            if (startBtn){ startBtn.textContent = 'End call'; startBtn.disabled = false; startBtn.classList.add('is-live'); }
+          },
+          onDisconnect: () => reset(),
+          onModeChange: ({ mode }) => {
+            if (screenEl) screenEl.dataset.mode = mode;
+            if (hintEl && convo) hintEl.textContent = mode === 'speaking' ? 'Sofia is speaking' : 'Listening';
+          },
+          onError: (m) => { console.error('call error', m); if (topEl) topEl.textContent = 'Connection error'; reset(); },
+        });
+      } catch (e) {
+        console.error(e);
+        if (topEl) topEl.textContent = (e && e.name === 'NotAllowedError') ? 'Microphone blocked' : 'Could not connect';
+        reset();
+        if (hintEl) hintEl.textContent = 'Tap to retry';
+      }
+    }
+    if (phone) phone.addEventListener('click', toggle);
+    if (startBtn) startBtn.addEventListener('click', toggle);
+    reset();
+
     const obs = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:0.12});
     document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*60)+'ms';obs.observe(el)});
   </script>
